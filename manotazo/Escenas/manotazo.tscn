@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://k1wcjo523nlk"]
+
+[ext_resource type="PackedScene" uid="uid://dq2m1ah7jgf7c" path="res://Escenas/elemento_base.tscn" id="1_vlixu"]
+
+[node name="Manotazo" type="Node2D"]
+
+[node name="ElementoBase" parent="." instance=ExtResource("1_vlixu")]
+position = Vector2(49, 36)

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://3t3jb720qi18"]
+
+[ext_resource type="Script" uid="uid://bbriw1rklnq1v" path="res://Scripts/topoItem.gd" id="1_sb1ac"]
+[ext_resource type="Texture2D" uid="uid://df0xqp48qnpvl" path="res://imagenes/personajes/coco.png" id="2_sgdbw"]
+[ext_resource type="Texture2D" uid="uid://cdy8r1xmmu27q" path="res://imagenes/botones/button_close02.png" id="3_lclvd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lclvd"]
+bg_color = Color(0.90938646, 0.19734079, 0.9999998, 1)
+
+[sub_resource type="Theme" id="Theme_rom2n"]
+Button/styles/pressed = SubResource("StyleBoxFlat_lclvd")
+
+[node name="TopoItem" type="Control" groups=["TopoItem"]]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 80.0
+script = ExtResource("1_sb1ac")
+
+[node name="btnTopo" type="Button" parent="."]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 0
+offset_right = 264.0
+offset_bottom = 264.0
+scale = Vector2(0.3, 0.3)
+theme = SubResource("Theme_rom2n")
+toggle_mode = true
+icon = ExtResource("2_sgdbw")
+
+[node name="errorSprite" type="Sprite2D" parent="."]
+position = Vector2(39.499996, 40)
+scale = Vector2(0.6015625, 0.60937506)
+texture = ExtResource("3_lclvd")
+
+[connection signal="pressed" from="btnTopo" to="." method="_on_btn_topo_pressed"]

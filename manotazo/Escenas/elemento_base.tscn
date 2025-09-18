@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq2m1ah7jgf7c"]
+
+[ext_resource type="Script" uid="uid://crpml0jeiy3y0" path="res://Scripts/elemento_base.gd" id="1_veu5d"]
+[ext_resource type="Texture2D" uid="uid://df0xqp48qnpvl" path="res://imagenes/personajes/coco.png" id="2_sv24m"]
+
+[node name="ElementoBase" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_veu5d")
+
+[node name="itmBaseSprite2D" type="Sprite2D" parent="."]
+position = Vector2(131, 131)
+texture = ExtResource("2_sv24m")

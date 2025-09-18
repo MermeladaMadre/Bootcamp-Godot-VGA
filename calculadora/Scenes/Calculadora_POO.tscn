@@ -1,0 +1,162 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg32r4yj88ylq"]
+
+[ext_resource type="Script" uid="uid://3a36geke32cs" path="res://Scripts/calculadora_poo.gd" id="1_3k8d7"]
+[ext_resource type="PackedScene" uid="uid://ckfl4rce5xc2d" path="res://Scenes/tecla.tscn" id="2_3k8d7"]
+
+[node name="Calculadora digital" type="Node2D"]
+script = ExtResource("1_3k8d7")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 428.0
+offset_bottom = 650.0
+
+[node name="LblTitulo" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 135.0
+offset_bottom = 31.0
+text = "CALCULADORA POO"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 17.0
+offset_top = 82.0
+offset_right = -15.0
+offset_bottom = -21.0
+
+[node name="lblOperacion" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="LineEditPantalla" type="LineEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="B_Percent" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "%"
+
+[node name="B_CE" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "CE"
+
+[node name="B_C" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "C"
+
+[node name="B_Borrar" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "Borrar"
+
+[node name="B_1_X" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "1/X"
+
+[node name="B_X2" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "X2"
+
+[node name="B_R2" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "R2"
+
+[node name="B_Divide" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "/"
+
+[node name="B_7" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "7"
+
+[node name="B_8" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "8"
+
+[node name="B_9" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "9"
+
+[node name="B_Power" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "X"
+
+[node name="B_4" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "4"
+
+[node name="B_5" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "5"
+
+[node name="B_6" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "6"
+
+[node name="B_Minus" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "-"
+
+[node name="B_1" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "1"
+
+[node name="B_2" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "2"
+
+[node name="B_3" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "3"
+
+[node name="B_Plus" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "+"
+
+[node name="B_+-" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "+/-"
+
+[node name="B_0" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "0"
+
+[node name="B_Dot" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "."
+
+[node name="B_Result" parent="Panel/VBoxContainer/GridContainer" instance=ExtResource("2_3k8d7")]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+value = "="

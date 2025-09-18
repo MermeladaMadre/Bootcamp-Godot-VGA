@@ -1,0 +1,148 @@
+[gd_scene load_steps=8 format=3 uid="uid://lcswe4o7yw5o"]
+
+[ext_resource type="Script" uid="uid://dsg26yf5ka8oe" path="res://Scripts/calculadora_objetos.gd" id="1_nnugw"]
+[ext_resource type="PackedScene" uid="uid://pxyxv2rwgd71" path="res://Scenes/tecla_2.tscn" id="1_vwecy"]
+[ext_resource type="Texture2D" uid="uid://cpsp8kokbiy3w" path="res://Images/Symbol Plus.png" id="2_fb4yn"]
+[ext_resource type="Texture2D" uid="uid://2suwflnejy3f" path="res://Images/Symbol Dash.png" id="3_fb4yn"]
+[ext_resource type="Texture2D" uid="uid://cjn8pbm6mxopk" path="res://Images/Symbol Slash.png" id="4_vx31h"]
+[ext_resource type="Texture2D" uid="uid://cfhlaf356gj74" path="res://Images/Letter X.png" id="5_nnugw"]
+[ext_resource type="Texture2D" uid="uid://5hlyh0t4pvja" path="res://Images/Symbol !.png" id="7_gtg8g"]
+
+[node name="Calculadora_Objetos" type="Node2D"]
+script = ExtResource("1_nnugw")
+
+[node name="PanelCalculadora" type="Panel" parent="."]
+offset_left = 403.0
+offset_top = 81.0
+offset_right = 755.0
+offset_bottom = 557.0
+
+[node name="LblTitulo" type="Label" parent="PanelCalculadora"]
+layout_mode = 2
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 333.0
+offset_bottom = 33.0
+text = "CALCULADORA"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelCalculadora"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 65.0
+offset_right = 333.0
+offset_bottom = 443.0
+
+[node name="LineEditTemp" type="LineEdit" parent="PanelCalculadora/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+alignment = 2
+
+[node name="LineEdit" type="LineEdit" parent="PanelCalculadora/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelCalculadora/VBoxContainer"]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 2
+columns = 4
+
+[node name="btnDEL" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "DEL"
+
+[node name="btnC" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "C"
+
+[node name="btnPorciento" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "%"
+imagen = ExtResource("7_gtg8g")
+
+[node name="btnDiv" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "/"
+imagen = ExtResource("4_vx31h")
+
+[node name="btn7" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "7"
+
+[node name="btn8" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "8"
+
+[node name="btn9" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "9"
+
+[node name="btnPow" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "*"
+imagen = ExtResource("5_nnugw")
+
+[node name="btn4" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "4"
+
+[node name="btn5" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "5"
+
+[node name="btn6" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "6"
+
+[node name="btnMinus" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "-"
+imagen = ExtResource("3_fb4yn")
+
+[node name="btn1" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "1"
+
+[node name="btn2" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "2"
+
+[node name="btn3" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "3"
+
+[node name="btnPlus" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "+"
+imagen = ExtResource("2_fb4yn")
+
+[node name="btnNegPos" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "-/+"
+
+[node name="btn0" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "0"
+
+[node name="btnDot" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "."
+
+[node name="btnIguaoo" parent="PanelCalculadora/VBoxContainer/GridContainer" instance=ExtResource("1_vwecy")]
+layout_mode = 2
+simbolo = "="
+
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn7" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn8" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn9" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btnPow" to="." method="_on_btn_pow_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn4" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn5" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn6" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btnMinus" to="." method="_on_btn_minus_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn1" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn2" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn3" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btnPlus" to="." method="_on_btn_plus_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btn0" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btnDot" to="." method="_on_btn_yyy_presionado"]
+[connection signal="presionado" from="PanelCalculadora/VBoxContainer/GridContainer/btnIguaoo" to="." method="_on_btn_plus_presionado"]

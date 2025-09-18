@@ -1,0 +1,144 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqk041nvlxycc"]
+
+[ext_resource type="PackedScene" uid="uid://3t3jb720qi18" path="res://Escenas/topo_item.tscn" id="1_tbcrh"]
+[ext_resource type="Script" uid="uid://bam8k56w48h7" path="res://Scripts/tablero.gd" id="1_ufv1q"]
+[ext_resource type="PackedScene" uid="uid://dq2m1ah7jgf7c" path="res://Escenas/elemento_base.tscn" id="2_cg76r"]
+
+[node name="Tablero" type="Control"]
+layout_mode = 3
+anchor_right = 0.833
+anchor_bottom = 0.556
+offset_right = 0.239929
+offset_bottom = -0.480042
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ufv1q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="btnGeneradorTest" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Test Generador"
+
+[node name="ElementoBase" parent="VBoxContainer" instance=ExtResource("2_cg76r")]
+custom_minimum_size = Vector2(264, 264)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 6
+
+[node name="TopoItem" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem2" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem3" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem4" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem5" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem6" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem7" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem8" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem9" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem10" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem11" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem12" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem13" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem14" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem15" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem16" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem17" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem18" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem19" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem20" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem21" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem22" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem23" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem24" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem25" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem26" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem27" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem28" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem29" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem30" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem31" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem32" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem33" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem34" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem35" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[node name="TopoItem36" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/btnGeneradorTest" to="." method="_on_btn_generador_test_pressed"]

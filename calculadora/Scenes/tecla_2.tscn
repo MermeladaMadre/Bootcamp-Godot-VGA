@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://pxyxv2rwgd71"]
+
+[ext_resource type="Script" uid="uid://dm2usnopb27m6" path="res://Scripts/tecla_2.gd" id="1_4hx4y"]
+[ext_resource type="Texture2D" uid="uid://lnmrbsf27cxw" path="res://Images/Letter B.png" id="2_inl1e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inl1e"]
+bg_color = Color(0.222465, 0.106898, 0.00234101, 1)
+
+[node name="Tecla" type="Control" groups=["MiBoton"]]
+custom_minimum_size = Vector2(60, 40)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1006.0
+offset_bottom = -547.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4hx4y")
+
+[node name="btnTecla" type="Button" parent="."]
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_inl1e")
+
+[node name="ImagenSprite2D" type="Sprite2D" parent="btnTecla"]
+visible = false
+texture_filter = 1
+position = Vector2(31, 21)
+texture = ExtResource("2_inl1e")
+
+[connection signal="pressed" from="btnTecla" to="." method="_on_btn_tecla_pressed"]
