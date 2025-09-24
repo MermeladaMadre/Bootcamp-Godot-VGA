@@ -1,15 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqk041nvlxycc"]
+[gd_scene load_steps=5 format=3 uid="uid://cqk041nvlxycc"]
 
 [ext_resource type="PackedScene" uid="uid://3t3jb720qi18" path="res://Escenas/topo_item.tscn" id="1_tbcrh"]
 [ext_resource type="Script" uid="uid://bam8k56w48h7" path="res://Scripts/tablero.gd" id="1_ufv1q"]
 [ext_resource type="PackedScene" uid="uid://dq2m1ah7jgf7c" path="res://Escenas/elemento_base.tscn" id="2_cg76r"]
+[ext_resource type="Texture2D" uid="uid://df7keqqrpdnyw" path="res://imagenes/botones/inGame_counter.png" id="2_iqwsw"]
 
 [node name="Tablero" type="Control"]
 layout_mode = 3
-anchor_right = 0.833
-anchor_bottom = 0.556
-offset_right = 0.239929
-offset_bottom = -0.480042
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ufv1q")
@@ -19,9 +19,54 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="btnGeneradorTest" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-text = "Test Generador"
+
+[node name="ScoreTextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_iqwsw")
+
+[node name="txtMarcador" type="Label" parent="VBoxContainer/HBoxContainer/ScoreTextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -11.5
+offset_right = 5.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.69919544, 2.0816549e-06, 6.738305e-07, 1)
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerTextureRect2" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_iqwsw")
+
+[node name="txtTimer" type="Label" parent="VBoxContainer/HBoxContainer/TimerTextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -11.5
+offset_right = 5.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.69919544, 2.0816549e-06, 6.738305e-07, 1)
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ElementoBase" parent="VBoxContainer" instance=ExtResource("2_cg76r")]
 custom_minimum_size = Vector2(264, 264)
@@ -141,4 +186,27 @@ layout_mode = 2
 [node name="TopoItem36" parent="VBoxContainer/GridContainer" instance=ExtResource("1_tbcrh")]
 layout_mode = 2
 
-[connection signal="pressed" from="VBoxContainer/btnGeneradorTest" to="." method="_on_btn_generador_test_pressed"]
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="btnGeneradorTest" type="Button" parent="."]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 192.0
+offset_right = 485.0
+offset_bottom = 223.00005
+text = "Play"
+
+[node name="btnVerificador" type="Button" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 241.0
+offset_right = 483.0
+offset_bottom = 272.00006
+text = "Verificador"
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="pressed" from="btnGeneradorTest" to="." method="_on_btn_generador_test_pressed"]
+[connection signal="pressed" from="btnVerificador" to="." method="_on_btn_verificador_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

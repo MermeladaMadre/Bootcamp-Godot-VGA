@@ -11,13 +11,18 @@ config_version=5
 [application]
 
 config/name="manotazo"
+run/main_scene="uid://k1wcjo523nlk"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+globales="*res://Scripts/globales.gd"
 
 [display]
 
 window/size/viewport_width=720
-window/size/viewport_height=1080
+window/size/viewport_height=820
 window/handheld/orientation=1
 
 [rendering]

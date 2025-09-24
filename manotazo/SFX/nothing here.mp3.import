@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv6ynceoltdow"
+path="res://.godot/imported/nothing here.mp3-ecad1a838bb0f3fa5f2ab665aa4c7c76.mp3str"
+
+[deps]
+
+source_file="res://SFX/nothing here.mp3"
+dest_files=["res://.godot/imported/nothing here.mp3-ecad1a838bb0f3fa5f2ab665aa4c7c76.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
