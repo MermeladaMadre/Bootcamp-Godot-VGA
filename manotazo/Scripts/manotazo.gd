@@ -16,7 +16,7 @@ func _createGameOverPanelTween():
 		gameoverTween.kill()
 	
 	gameoverTween = get_tree().create_tween()
-	gameoverTween.tween_property($Control/CenterContainer, "position", Vector2(0.0,0.0),1).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	gameoverTween.tween_property($Control/CenterContainer, "position", Vector2(0.0,0.0),3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 	gameoverTween.play()
 
